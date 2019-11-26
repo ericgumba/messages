@@ -20,11 +20,38 @@
 
             </div>
             
-            <input type="text" id="userMessage"> </input>
-            <button> Get all messages </button>
-            <button> Send message </button>
+            <input type="text" id="userMessage"> </input> 
+            <button id="sendMessage"> Send message </button>
         </div> 
 
     <script src="js/main.js"></script>
     </body>
 </html> 
+
+
+<!-- console.log('starting func')
+
+const AWS = require('aws-sdk')
+const dc = new AWS.DynamoDB.DocumentClient({region: 'us-west-2'})
+
+exports.handler = async (event, ctx, callback) => {
+    // TODO implement
+    
+    var params = {
+        Item: {
+            date: Date.now(),
+            message: "foobar"
+        },
+        TableName: 'guestbook'
+    }
+    
+    dc.put(params, function(err, data){
+        if(err){
+            callback(err, null)
+        } else {
+            callback(null, data)    
+        }
+        
+        
+    }) 
+}; -->
