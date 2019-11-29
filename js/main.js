@@ -8,7 +8,7 @@ let message = document.getElementById('userMessage')
 
 let appendMessage = function(index, message){ 
     var node = document.createElement("ul");                 // Create a <ul> node
-    var textnode = document.createTextNode(`posted #${index}: \n ${message}`);         // Create a text node
+    var textnode = document.createTextNode(`post #${index}: \n ${message}`);         // Create a text node
     node.appendChild(textnode);                              // Append the text to <ul>
     allMessages.appendChild(node);     // Append <li> to <ul> with id="myList"
 }
